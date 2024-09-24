@@ -1,12 +1,10 @@
 import numpy as np
 import torch
 
-
 def hit(gt_item, pred_items):
 	if gt_item in pred_items:
 		return 1
 	return 0
-
 
 def ndcg(gt_item, pred_items):
 	if gt_item in pred_items:
@@ -17,7 +15,6 @@ def ndcg(gt_item, pred_items):
 
 def metrics(model, test_loader, top_k):
 	HR, NDCG = [], []
-
 	for user, item, label in test_loader:
 		user = user.cuda()
 		item = item.cuda()
