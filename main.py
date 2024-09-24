@@ -9,7 +9,7 @@ import torch.optim as optim
 import torch.utils.data as data
 import torch.backends.cudnn as cudnn
 from tensorboardX import SummaryWriter
-
+#for visualization
 import model
 import config
 import evaluate
