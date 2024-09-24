@@ -7,6 +7,7 @@ class NCF(nn.Module):
 	def __init__(self, user_num, item_num, factor_num, num_layers,
 					dropout, model, GMF_model=None, MLP_model=None):
 		super(NCF, self).__init__()
+						
 		"""
 		user_num: number of users;
 		item_num: number of items;
@@ -16,7 +17,8 @@ class NCF(nn.Module):
 		model: 'MLP', 'GMF', 'NeuMF-end', and 'NeuMF-pre';
 		GMF_model: pre-trained GMF weights;
 		MLP_model: pre-trained MLP weights.
-		"""		
+		"""	
+						
 		self.dropout = dropout
 		self.model = model
 		self.GMF_model = GMF_model
